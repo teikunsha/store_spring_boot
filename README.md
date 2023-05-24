@@ -4,7 +4,7 @@
 
 購物車功能網站
 
-<img width="379" height="800" src="https://github.com/teikunsha/store_spring_boot/blob/master/img-readme/store-spring-boot.jpg"/>
+<img width="379" height="800" src="https://github.com/teikunsha/store_spring_boot/blob/master/img-readme/store-spring-boot.png"/>
 
 ### 前端：
 
@@ -36,11 +36,11 @@
 
 ## 3. 部署
 
-#### 網址：[https://store-spring-boot.onrender.com/](https://store-spring-boot.onrender.com/)
+#### [https://store-spring-boot.onrender.com/](https://store-spring-boot.onrender.com/)
 
-> 部署於 [render](https://render.com/) 平台，開啟時請求速度可能較慢
+> 部署於 [render](https://render.com/) 平台，開啟時請求速度較慢
 
-> 資料庫建立於[db4free](https://www.db4free.net/)，請求速度較慢，如「商品一覽」需等待後才能顯示
+> 資料庫建立於 [db4free](https://www.db4free.net/) ，請求速度較慢，如「商品一覽」需等待後才能顯示
 
 #### 測試帳號
 
