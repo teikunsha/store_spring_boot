@@ -36,7 +36,7 @@
 
 ## 3. 部署
 
-#### 網址：[https://store-spring-boot.onrender.com/](https://store-spring-boot.onrender.com/)
+#### [https://store-spring-boot.onrender.com/](https://store-spring-boot.onrender.com/)
 
 > 部署於 [render](https://render.com/) 平台，開啟時請求速度可能較慢
 
