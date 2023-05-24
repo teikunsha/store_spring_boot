@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Yomogi&display=swap');
+*{
+	@charset “UTF-8”;
+    font-family: 'Yomogi', cursive;
+}
+a{
+	text-decoration: none;
+}
+body{
+	background-color: #fbfbfb;
+}
+.nav{
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	height: 90px;
+	background-color: #333333;
+}
+.item{
+	position: relative;
+	display: flex;
+	align-items: center;
+}
+.nav-link{
+	font-size: 20px;
+	color: #fff;
+	letter-spacing: 1px;
+}
+.logo{
+	width: 50px;
+	height: 50px;
+}
+.fa-shopping-cart, .fa-lg, .fa-receipt{
+	position: relative;
+	top: 25px;
+	font-size: 25px;
+	color: #fff;
+	vertical-align: bottom;
+	margin-bottom: 60px;
+}
+.fa-receipt{
+	left: 10px;
+}
+.cart_title::after{
+	content: '購物車';
+	position: relative;
+	right: 38px;
+	bottom: 17px;
+	font-size: 13px;
+	font-weight: lighter;
+	color: #fff;
+}
+.login_title::after{
+	content: '登入';
+	position: relative;
+	right: 33px;
+	bottom: 17px;
+	font-size: 13px;
+	font-weight: lighter;
+	color: #fff;
+}
+.orderinfo_title::after{
+	content: '訂單查詢';
+	position: relative;
+	right: 33px;
+	bottom: 17px;
+	font-size: 13px;
+	font-weight: lighter;
+	color: #fff;
+}
+.logout{
+	cursor: pointer;
+}
+.logout_title::after{
+	content: '登出';
+	position: relative;
+	right: 33px;
+	bottom: 17px;
+	font-size: 13px;
+	color: #fff;
+}
+footer{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #333333;
+	height: 50px;
+	color: #fff;
+	font-size: 20px;
+	font-weight: 600;
+	letter-spacing: 2px;
+}

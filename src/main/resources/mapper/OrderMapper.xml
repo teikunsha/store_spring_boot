@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sp.store.mapper.OrderMapper">
+    <resultMap id="OrderVOEntityMap" type="com.sp.store.vo.OrderVO">
+        <result column="total_price" property="totalPrice"/>
+        <result column="order_time" property="orderTime"/>
+    </resultMap>
+
+    <insert id="insertOrder" useGeneratedKeys="true" keyProperty="oid">
+        INSERT INTO t_order (
+        uid, total_price,status, order_time, created_user, created_time, modified_user,
+        modified_time
+        ) VALUES (
+        #{uid}, #{totalPrice}, #{status}, #{orderTime}, #{createdUser},
+        #{createdTime}, #{modifiedUser}, #{modifiedTime}
+        )
+    </insert>
+
+    <insert id="insertOrderItem" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO t_order_item(
+        oid, pid, title, image, price, num, created_user,
+        created_time, modified_user, modified_time
+        ) VALUE (
+        #{oid}, #{pid}, #{title}, #{image}, #{price}, #{num}, #{createdUser},
+        #{createdTime}, #{modifiedUser}, #{modifiedTime}
+        )
+    </insert>
+
+    <delete id="cleanCart">
+        DELETE FROM t_cart WHERE uid=#{uid}
+    </delete>
+
+    <select id="findOrderByOid" resultMap="OrderVOEntityMap">
+        SELECT oid, uid, total_price, order_time
+        FROM t_order
+        WHERE uid=#{uid}
+        ORDER BY order_time
+    </select>
+
+    <select id="findOrderDetailByOid" resultType="com.sp.store.vo.OrderItemVO">
+        SELECT id, oid, title, image, price, num
+        FROM t_order_item
+        WHERE oid=#{oid}
+        ORDER BY id
+    </select>
+</mapper>

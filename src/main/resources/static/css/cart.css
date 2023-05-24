@@ -1,0 +1,76 @@
+.container{
+	padding: 0 150px 0 150px;
+	min-height: 79.9vh;
+}
+main{
+	flex: 1;
+}
+.title{
+	text-align: center;
+	font-size: 30px;
+	font-weight: 600;
+}
+.return_to_index a{
+	position: relative;
+	font-size: 30px;
+	color: #000;
+}
+#noItem{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 50px;
+	font-weight: 600;
+	letter-spacing: 3px;
+}
+.return_to_index a::after{
+	position: absolute;
+	bottom: 7px;
+	content: '繼續購物';
+	width: 200px;
+	margin-left: 25px;
+	font-size: 20px;
+	color: #518BB5;
+}
+.img-responsive{
+	width: 230px;
+	height: 180px;
+	margin: 10px;
+}
+.num-btn {
+	width: 30px;
+}
+input{
+	text-align:center
+}
+.cart-table tbody tr:not(:first-child) {
+	border-top: 1px dashed #cccccc;
+}
+.total-bar .row{
+	display: flex;
+	align-items: center;
+	text-align: end;
+	width: 100%;
+	height: 120px;
+	background-color: #F0F0F0;
+}
+.total_price_1, .total_price_2{
+	font-size: 30px;
+	font-weight: 600;
+	letter-spacing: 5px;
+}
+.checkout_btn{
+	width: 300px;
+    height: 45px;
+    font-size: 20px;
+    letter-spacing: 3px;
+    transition: .4s;
+	background-color: #000;
+    color: #FFF;
+	margin-right: 50px;
+}
+.checkout_btn:hover{
+	transition: .4s;
+    background-color: #FFF;
+    color: #000;
+}

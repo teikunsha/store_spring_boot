@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="renderer" content="webkit" />
+		<title>首頁 | 文具專賣</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- Jquery -->
+		<script src="https://code.jquery.com/jquery-3.6.4.js"></script>
+		<!-- bootstrap -->
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+		<!-- fontawesome -->
+		<script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc" crossorigin="anonymous"></script>
+		<script defer src="https://use.fontawesome.com/releases/v5.15.4/js/solid.js" integrity="sha384-/BxOvRagtVDn9dJ+JGCtcofNXgQO/CCCVKdMfL115s3gOgQxWaX/tSq5V8dRgsbc" crossorigin="anonymous"></script>
+		<!-- 自定義CSS -->
+		<link rel="stylesheet" href="./css/template.css">
+		<link rel="stylesheet" href="./css/index.css">
+	</head>
+
+	<body>
+		<header class="header mb-5">
+			<ul class="nav">
+				<div>
+					<a href="index.html"><img src="../images/index/logo.png" alt="" class="logo"></a>
+				</div>
+				<div class="item">
+					<!-- <li class="nav-item">
+						<a class="nav-link" href="">首頁</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/">商品一覽</a>
+					</li> -->
+					<li class="nav-item">
+						<a href="web/orderInfo.html">
+							<i class="fas fa-receipt"></i>
+							<span class="orderinfo_title"></span>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a href="web/cart.html">
+							<i class="fas fa-shopping-cart"></i>
+							<span class="cart_title"></span>
+						</a>
+					</li>
+					<li id="login" class="nav-item">
+						<a href="web/login.html">
+							<i class="far fa-user fa-lg"></i>
+							<span class="login_title"></span>
+						</a>
+					</li>
+					<li id="logout" class="nav-item logout" style="display: none">
+						<div>
+							<i class="far fa-user fa-lg"></i>
+							<span class="logout_title"></span>
+						</div>
+					</li>
+				</div>
+			</ul>
+		</header>
+
+		<section class="mb-5">
+			<div id="carouselExampleIndicators" class="carousel slide">
+				<div class="carousel-indicators">
+				  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+				  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+				  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+				</div>
+				<div class="carousel-inner">
+				  <div class="carousel-item active">
+					<img src="../images/index/cro1.jpg" class="d-block w-100" alt="...">
+				  </div>
+				  <div class="carousel-item">
+					<img src="../images/index/cro2.jpg" class="d-block w-100" alt="...">
+				  </div>
+				  <div class="carousel-item">
+					<img src="../images/index/cro3.jpg" class="d-block w-100" alt="...">
+				  </div>
+				</div>
+				<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+				  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				  <span class="visually-hidden">Previous</span>
+				</button>
+				<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+				  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+				  <span class="visually-hidden">Next</span>
+				</button>
+			  </div>
+		</section>
+
+		<section>
+			<div class="container mb-5">
+				<div class="product-title mb-5"><i class="fas fa-pen"></i>商品一覽</div>
+				<div id="product_list" class="product_list">
+					<div class="product_item" style="width: 18rem;">
+						<a href=""><img src="../images/product/note/1_big.jpg" class="card-img-top" alt=""></a>
+						<div class="product_content">
+							<p class="product_item_title">橫線5mm x 30行筆記本 B5 三色</p>
+							<p clsss="product_item_price">＄</p>
+						</div>
+					</div>
+					<div class="product_item" style="width: 18rem;">
+						<a href=""><img src="../images/product/note/1_big.jpg" class="card-img-top" alt=""></a>
+						<div class="product_content">
+							<p class="product_item_title">橫線5mm x 30行筆記本 B5 三色</p>
+							<p clsss="product_item_price">＄</p>
+						</div>
+					</div>
+					<div class="product_item" style="width: 18rem;">
+						<a href=""><img src="../images/product/note/1_big.jpg" class="card-img-top" alt=""></a>
+						<div class="product_content">
+							<p class="product_item_title">橫線5mm x 30行筆記本 B5 三色</p>
+							<p clsss="product_item_price">＄</p>
+						</div>
+					</div>
+					<div class="product_item" style="width: 18rem;">
+						<a href=""><img src="../images/product/note/1_big.jpg" class="card-img-top" alt=""></a>
+						<div class="product_content">
+							<p class="product_item_title">橫線5mm x 30行筆記本 B5 三色</p>
+							<p clsss="product_item_price">＄</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section>
+			<div class="container mb-5">
+				<div class="row">
+					<div class="col-6 shop_info">
+							<div class="shop_title mb-3">店舖位置</div>
+							<div class="shop_address">地址：台中市西區公益路68號</div>
+							<div class="tel">連絡電話：04 - 23169887</div>
+							<div class="shop_hours">營業時間：11：00 ～ 21：30</div>
+					</div>
+					<div class="col-6">
+						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1820.2921130669533!2d120.66255785652447!3d24.151235394577206!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693d9dd82789cd%3A0x2e2c3778af6649bf!2zNDAz5Y-w5Lit5biC6KW_5Y2A5YWs55uK6LevNjjomZ8!5e0!3m2!1szh-TW!2stw!4v1683920636799!5m2!1szh-TW!2stw" width="600" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		<footer class="footer">
+			<span>@個人練習作品 無任何商業用途</span>
+		</footer>
+
+		<!-- 自定義JS -->
+		<script src="../js/getSession.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				showHotList();
+			});
+			function showHotList() {
+				$("#product_list").empty();
+				$.ajax({
+					url: "/products/hot_list",
+					type: "GET",
+					dataType: "JSON",
+					success: function(json) {
+						let list = json.data;
+						for (let i = 0; i < list.length; i++) {
+							let html = `<div class="product_item" style="width: 18rem;"> 
+											<a href="web/product.html?id=#{id}"><img src="..#{image}all.jpg" class="card-img-top" alt=""></a>
+											<div class="product_content"> 
+												<p class="product_item_title">#{title}</p>
+												<p clsss="product_item_price">＄#{price}</p>
+											</div>
+										</div>`
+							html = html.replace(/#{id}/g, list[i].id);
+							html = html.replace(/#{title}/g, list[i].title);
+							html = html.replace(/#{price}/g, list[i].price);
+							html = html.replace(/#{image}/g, list[i].image);
+							$("#product_list").append(html);
+						}
+					}
+				});
+			}
+		</script>
+	</body>
+
+</html>

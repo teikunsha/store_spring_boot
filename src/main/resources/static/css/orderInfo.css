@@ -1,0 +1,51 @@
+.container{
+	display: flex;
+	flex-direction: column;
+	min-height: 79.9vh;
+	padding: 0 100px 0 100px;
+}
+main{
+	flex:1;
+}
+.title{
+	text-align: center;
+	font-size: 30px;
+	font-weight: 600;
+}
+.return_to_index a{
+	position: relative;
+	font-size: 30px;
+	color: #000;
+}
+.return_to_index a::after{
+	position: absolute;
+	bottom: 7px;
+	content: '返回首頁';
+	width: 200px;
+	margin-left: 25px;
+	font-size: 20px;
+	color: #518BB5;
+}
+.accordion{
+	margin-bottom: 50px;
+
+}
+.accordion span{
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, 50%);
+	font-size: 50px;
+	font-weight: 600;
+	letter-spacing: 3px;
+}
+.accordion-button, .accordion-button:not(.collapsed){
+	background-color: #518BB5;
+	background-color: #c5d2dc;
+}
+
+.accordion-button:focus{
+	box-shadow: none;
+}
+.accordion-button::after{
+	content: none;
+}
