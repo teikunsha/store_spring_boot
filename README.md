@@ -38,7 +38,7 @@
 
 > 部署於 [render.com](render.com) 平台，開啟時請求速度可能較慢
 
-> 資料庫建立於[db4free](https://www.db4free.net/)，請求速度較慢，如「商品一覽」需等待後才會顯示
+> 資料庫建立於[db4free](https://www.db4free.net/)，請求速度較慢，如「商品一覽」需等待後才能顯示
 
 #### 測試帳號
 
