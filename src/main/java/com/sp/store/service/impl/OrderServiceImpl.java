@@ -26,7 +26,7 @@ public class OrderServiceImpl implements OrderService {
 
     @Override
     public Order create(Integer uid, String username, Integer[] cids) {
-        // 取得購物車的資料(即將要下單的列表)
+        // 取得購物車的資料(即將要購買商品)
         List<CartVO> list = cartService.getVOByCid(uid, cids);
 
         // 計算商品總價
@@ -39,30 +39,28 @@ public class OrderServiceImpl implements OrderService {
         Order order = new Order();
         order.setUid(uid);
 
-        // 建立訂單詳情的資料
-        for(CartVO c : list) {
-            totalPirce += c.getPrice() * c.getNum();
-
-            // 建立訂單詳情物件
-            OrderItem orderItem = new OrderItem();
         // 支付
         order.setStatus(0);
+        // 總價
         order.setTotalPrice(totalPirce);
-
-        // 訂單建立時間
-        order.setOrderTime(new Date());
-
         // 日誌
         order.setCreatedUser(username);
         order.setCreatedTime(new Date());
         order.setModifiedUser(username);
         order.setModifiedTime(new Date());
+        // 訂單建立時間
+        order.setOrderTime(new Date());
 
         Integer rows = orderMapper.insertOrder(order);
         if(rows != 1) {
             throw new InsertException("新增訂單異常");
         }
 
+        // 循環插入訂單詳情的資料
+        for(CartVO c : list) {
+            // 建立訂單詳情物件
+            OrderItem orderItem = new OrderItem();
+            // 訂單詳情
             orderItem.setOid(order.getOid());
             orderItem.setPid(c.getPid());
             orderItem.setTitle(c.getTitle());
@@ -83,6 +81,7 @@ public class OrderServiceImpl implements OrderService {
                 throw new InsertException("新增訂單詳細異常");
             }
 
+            // 移除購物車商品
             orderMapper.cleanCart(uid);
         }
         return order;
