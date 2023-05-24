@@ -4,7 +4,7 @@
 
 購物車功能網站
 
-![]([https://github.com/teikunsha/store_spring_boot/blob/master/img-readme/store-spring-boot.onrender.com_.png?raw=true](https://i.imgur.com/4CKRpvD.png))
+![](https://imgur.com/a/UFankVN)
 
 ### 前端：
 
