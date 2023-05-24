@@ -4,7 +4,7 @@
 
 購物車功能網站
 
-<img width="379" height="800" src="(https://imgur.com/a/ZhYJ63x)"/>
+<img width="379" height="800" src="https://imgur.com/a/ZhYJ63x"/>
 
 ### 前端：
 
